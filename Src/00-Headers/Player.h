@@ -7,7 +7,7 @@ private:
 	sf::RectangleShape	m_shape;
 	sf::Vector2f		m_velocity	{ 0.f,0.f };
 
-	virtual void Draw(sf::RenderTarget& target, sf::RenderStates states) const;
+	virtual void draw(sf::RenderTarget& target, sf::RenderStates states) const override;
 
 public:
 	Player();
@@ -18,11 +18,12 @@ public:
 	bool	m_isMoving	{ false };
 
 	void Update(sf::Time deltaTime);
+
+	void ProcessEvents();
 	
-	template<typename ... Args>
-	void SetPosition(Args&& ... args)
-	{
-		m_shape.setPosition(std::forward<Args>(Args)...);
+	template<typename ... Args>	
+	void SetPosition(Args&& ... args) {
+		m_shape.setPosition(std::forward<Args>(args)...);
 	}
 };
 

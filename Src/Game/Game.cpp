@@ -1,4 +1,5 @@
 #include "../00-Headers/Game.h"
+
 //Privates methods
 void Game::ProcessEvent()
 {
@@ -10,25 +11,27 @@ void Game::ProcessEvent()
 		case(sf::Event::Closed):
 			m_window.close();
 			break;
+
 		case(sf::Event::KeyPressed):
 			switch (event.key.code)
 			{
 			case(sf::Keyboard::Escape):
 				m_window.close();
 				break;
-			default:
-				break;
 			}			
 			break;
+
 		default:
 			break;
 		}
 	}
+
+	m_player.ProcessEvents();
 }
 
-void Game::Update(sf::Time timePerFrame)
+void Game::Update(sf::Time deltaTime)
 {
-
+	m_player.Update(deltaTime);
 }
 
 void Game::Render()
