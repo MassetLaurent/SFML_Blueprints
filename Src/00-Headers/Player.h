@@ -1,7 +1,9 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 
-class Player : public sf::Drawable
+#include "ActionTarget.h"
+
+class Player : public sf::Drawable, public ActionTarget
 {
 private:
 	sf::RectangleShape	m_shape;
