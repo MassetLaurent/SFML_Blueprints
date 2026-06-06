@@ -33,8 +33,7 @@ bld/
 [Ll]og/
 [Ll]ogs/
 [Cc]make/
-[Ee]xternal/SFML/include
-[Ee]xternal/SFML/lib
+[Cc][Mm]ake[Bb]uild/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
