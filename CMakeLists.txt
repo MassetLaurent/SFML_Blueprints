@@ -15,6 +15,7 @@ set(CMAKE_BUILD_TYPE Release)
 set(HEADERS
     Src/00-HEADERS/Action.h
     Src/00-HEADERS/ActionTarget.h
+    Src/00-HEADERS/ActionMap.h
     Src/00-HEADERS/Game.h
     Src/00-HEADERS/Player.h
 )
@@ -23,6 +24,7 @@ set(SRCS
     Src/main.cpp
     Src/Action/Action.cpp
     Src/Action/ActionTarget.cpp
+    Src/Action/ActionMap.cpp
     Src/Game/Game.cpp
     Src/Player/Player.cpp
     )
